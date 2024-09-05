@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://www.weathercompany.com/wp-content/uploads/2024/01/hero-hurricane-storm-weather-shutterstock_1603937461.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.card {
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    margin: 100px auto;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.search button img {
+    width: 25px;
+}
+
+.weather-icon {
+    width: 170px;
+    margin-top: 30px;
+}
+
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.weather h2 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img {
+    width: 60px;
+    height: 42px !important;
+    margin-right: 10px;
+}
+
+.humidity, .wind {
+    font-size: 28px;
+    margin-top: -6px;
+}
+
+.weather {
+    display: none;
+}
+
+.error {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+
+/* Responsive Design */
+/* For screens up to 768px */
+@media (max-width: 768px) {
+    .details {
+        display: flex;
+        justify-content: center; /* Center the details container horizontally */
+        gap: 20px;               /* Space between the wind and humidity sections */
+        padding: 0 10px;
+    }
+
+    .col {
+        display: flex;
+        flex-direction: row;    /* Keep the icon and text side by side */
+        align-items: center;    /* Vertically align the items in each column */
+        justify-content: center;/* Horizontally center the content */
+    }
+
+    .col img {
+        width: 50px;            /* Adjust the icon size */
+        height: 40px !important;
+        margin-right: 10px;     /* Add some space between icon and text */
+    }
+
+    .humidity, .wind {
+        font-size: 24px;        /* Adjust font size */
+        margin-top: 0;          /* Remove any top margin */
+    }
+}
+
+/* For screens up to 480px */
+@media (max-width: 480px) {
+    .search input {
+        width: 200px;    /* Adjust input width for smaller screens */
+        font-size: 16px; /* Adjust font size for better readability */
+    }
+
+    .search button img {
+        width: 25px;     /* Adjust the size of the search icon */
+    }
+
+    .details {
+        display: flex;
+        flex-direction: row;    /* Wind and humidity side by side */
+        justify-content: space-between; /* Space between both sections */
+        padding: 0 10px;
+    }
+
+    .col {
+        display: flex;
+        flex-direction: row;    /* Icon and text side by side */
+        justify-content: center;/* Horizontally center the content */
+        align-items: center;    /* Vertically align the content */
+    }
+
+    .col img {
+        width: 40px;            /* Make the icons smaller on smaller screens */
+        height: 30px !important;
+        margin-right: 8px;      /* Space between the icon and text */
+    }
+
+    .humidity, .wind {
+        font-size: 20px;        /* Smaller text size for small screens */
+        margin-top: 0;          /* Remove any top margin */
+    }
+}
+
+/* For screens up to 390px */
+@media (max-width: 390px) {
+    .search input {
+        width: 200px;    /* Adjust input width for smaller screens */
+        font-size: 16px; /* Adjust font size for better readability */
+    }
+
+    .search button img {
+        width: 25px;     /* Adjust the size of the search icon */
+    }
+}
+
