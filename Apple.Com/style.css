@@ -29,6 +29,9 @@ a{
     height: 650px;
     background-size: 100% 100%;
 }
+.custom-margin{
+    margin-right: 15px;
+}
 
 .carousel-item > img{
    height: 700px !important;
