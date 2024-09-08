@@ -59,3 +59,48 @@ sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200});
 
 
 
+
+
+// ye form submit ka he 
+// const express = require('express');
+// const nodemailer = require('nodemailer');
+// const bodyParser = require('body-parser');
+
+// const app = express();
+// app.use(bodyParser.urlencoded({ extended: true }));
+
+// // Handle form submission
+// app.post('/submit-form', (req, res) => {
+//   const { name, email, message } = req.body;
+
+//   // Setup Nodemailer to send email
+//   const transporter = nodemailer.createTransport({
+//     service: 'gmail',
+//     auth: {
+//       user: 'developervision32@gmailcom',  // Replace with your email
+//       pass: 'Jamali.123',   // Replace with your password
+//     },
+//   });
+
+//   const mailOptions = {
+//     from: 'your-email@gmail.com',
+//     to: 'developervision32@gmailcom', // Your email to receive the notification
+//     subject: 'New Contact Form Submission',
+//     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+//   };
+
+//   // Send email notification
+//   transporter.sendMail(mailOptions, (error, info) => {
+//     if (error) {
+//       return res.status(500).send('Error sending email');
+//     }
+//     res.send('Form submitted successfully');
+//   });
+// });
+
+// app.listen(3000, () => {
+//   console.log('Submit your masage');
+// });
+
+
+

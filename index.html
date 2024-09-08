@@ -41,9 +41,9 @@
                 </div>
 
                 <div class="home__social">
-                    <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.linkedin.com/in/zahoor-ahmed-1b0583285?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
                     <a href="https://www.instagram.com/developervision?igsh=MWQwd2N3NnAzYnFsYg==" class="home__social-icon"><i class='bx bxl-instagram'></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://x.com/zahoorjamali32?s=09" class="home__social-icon"><i class='bx bxl-twitter' ></i></a>
                 </div>
 
                 <div class="home__img">
@@ -145,22 +145,22 @@
 
                 <div class="work__container bd-grid">
                     <a href="Apple.Com/" class="work__img">
-                        <img src="https://media.cnn.com/api/v1/images/stellar/prod/111006055359-apple-logo-new-york.jpg?q=w_3000,h_2000,x_0,y_0,c_fill" alt="">
+                        <img src="https://media.cnn.com/api/v1/images/stellar/prod/111006055359-apple-logo-new-york.jpg?q=w_3000,h_2000,x_0,y_0,c_fill" alt="Apple.Com">
                     </a>
                     <a href="Fedralist Pig/" class="work__img">
-                        <img src="https://static.vecteezy.com/system/resources/previews/016/541/817/original/burger-cola-pizza-fries-takeaway-fastfood-vector.jpg" alt="">
+                        <img src="https://static.vecteezy.com/system/resources/previews/016/541/817/original/burger-cola-pizza-fries-takeaway-fastfood-vector.jpg" alt="Fast Food">
                     </a>
                     <a href="Weather App/" class="work__img">
-                        <img src="https://images-platform.99static.com/J6dK2OCuxeZP8bMUOSV-c_qaT-c=/4x102:806x904/500x500/top/smart/99designs-contests-attachments/63/63429/attachment_63429975" alt="">
+                        <img src="https://images-platform.99static.com/J6dK2OCuxeZP8bMUOSV-c_qaT-c=/4x102:806x904/500x500/top/smart/99designs-contests-attachments/63/63429/attachment_63429975" alt="Weather App">
+                    </a>
+                    <a href="Light Bulb/" class="work__img">
+                        <img src="https://cdn.pixabay.com/photo/2023/08/25/09/58/ai-generated-8212644_1280.jpg" alt="Light Bulb">
                     </a>
                     <a href="" class="work__img">
-                        <img src="https://www.zilliondesigns.com/blog/wp-content/uploads/Graphic-Designer-1.jpg" alt="">
+                        <img src="https://addons.mozilla.org/user-media/previews/full/228/228908.png?modified=1622134213" alt="">
                     </a>
                     <a href="" class="work__img">
-                        <img src="https://images.pexels.com/photos/414974/pexels-photo-414974.jpeg?cs=srgb&dl=pexels-pixabay-414974.jpg&fm=jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="https://wallpaperbat.com/img/867493-logodesign-websitesdesigningservices-graphicdesign-73gjy1-graphic-design-company-creative-graphic-design-learning-graphic-design.jpg" alt="">
+                        <img src="https://img.freepik.com/premium-vector/blue-white-logo-with-word-finance_643908-457.jpg" alt="">
                     </a>
                 </div>
             </section>
@@ -170,13 +170,13 @@
                 <h2 class="section-title">Contact</h2>
 
                 <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Submit" class="contact__button button">
-                    </form>
-                </div>
+                <form action="/submit-form" method="POST" class="contact__form">
+                    <input type="text" name="name" placeholder="Name" class="contact__input" required>
+                    <input type="email" name="email" placeholder="Email" class="contact__input" required>
+                    <textarea name="message" placeholder="Your message" class="contact__input" required></textarea>
+                    <input type="submit" value="Submit" class="contact__button button">
+                </form>
+            </div>      
             </section>
         </main>
 
@@ -184,9 +184,9 @@
         <footer class="footer">
             <p class="footer__title">Zahoor Ahmed</p>
             <div class="footer__social">
-                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+                <a href="https://www.facebook.com/share/JSEoZmSJ73L18VtX/?mibextid=qi2Omg" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+                <a href="https://www.instagram.com/developervision?igsh=MWQwd2N3NnAzYnFsYg" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://x.com/zahoorjamali32?s=09" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
             </div>
             <p class="footer__copy">&#169; Developed by. Zahoor Ahmed</p>
         </footer>
@@ -195,6 +195,7 @@
         <!--===== SCROLL REVEAL =====-->
         <script src="https://unpkg.com/scrollreveal"></script>
 
+       
         <!--===== MAIN JS =====-->
         <script src="apps.js"></script>
     </body>
