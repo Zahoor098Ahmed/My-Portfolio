@@ -291,8 +291,8 @@ body {
     .bulb::before {
         top: -50px; /* No change to preserve shape */
         left: 22.5px;
-        width: 30px;
-        height: 70px;
+        width: 35px;
+        height: 80px;
     }
 
     .on .bulb::after {
@@ -315,7 +315,7 @@ body {
     
     .switch .btn {
         position: relative;
-        width: 20px;
+        width: 2px;
         height: 35px;
         background: linear-gradient(#777, #fff, #777);
         border-radius: 6px;
