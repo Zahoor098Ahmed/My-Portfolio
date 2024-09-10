@@ -1,5 +1,7 @@
 
   
+ 
+  
  /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 /*===== VARIABLES CSS =====*/
@@ -213,9 +215,37 @@ img {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 260px;
+  width: 230px;
+ 
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15); 
   
-  
+}
+
+.home__img img{
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 0.5rem 0; /* Only bottom-right corner rounded */
+ 
+ 
+ 
+}
+
+.red-line{
+  /* =====Single line ===== */
+  /* border-left: 5px solid red; 
+  border-top: 5px  solid red; 
+  padding-left: 10px; 
+  padding-top: 10px;
+  border-radius: 10px;
+   */
+
+  /* =====Double line ===== */
+  border-top: 5px double red;
+  border-left: 5px double red;
+  padding-left: 10px; 
+  padding-top: 10px;
+  border-radius: 10px;
 }
 
 /*BUTTONS*/
@@ -242,11 +272,32 @@ img {
 }
 .about__img {
   justify-self: center;
+  height: 100% !important;
+  border-radius: 0.5rem ;
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
 }
+
+
 .about__img img {
   width: 100%;
   height: 100%;
   border-radius: 0.5rem;
+
+
+/* =====Single line ===== */
+   /* border-right: 5px solid red; 
+   border-bottom: 5px  solid red; 
+   padding-right: 10px; 
+   padding-bottom: 10px; */
+   
+   
+ 
+   /* =====Double line ===== */
+   border-bottom: 5px double red;
+   border-right: 5px double red;
+   padding-right: 10px; 
+   padding-bottom: 10px;
+   border-radius: 10px;
 }
 
 /* ===== SKILLS =====*/
@@ -379,6 +430,7 @@ img {
   }
   .home__img {
     width: 200px;
+    height: 30% !important;
   }
 }
 @media screen and (min-width: 576px) {
@@ -487,6 +539,6 @@ img {
     padding: 10rem 0 2rem;
   }
   .home__img {
-    width: 450px;
+    width: 400px;
   }
 }
