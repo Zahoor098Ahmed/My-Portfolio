@@ -340,17 +340,20 @@ img {
   border-radius: 0.5rem;
   z-index: var(--z-back);
 }
-.skills__html {
-  width: 95%;
+.skills__react/next {
+  width: 92%;
 }
-.skills__css {
-  width: 85%;
+.skills__node/express {
+  width: 87%;
 }
 .skills__js {
-  width: 65%;
+  width: 90%;
 }
-.skills__ux {
-  width: 85%;
+.skills__db {
+  width: 94%;
+}
+.skills__git/github {
+  width: 90%;
 }
 .skills__img {
   border-radius: 0.5rem;
