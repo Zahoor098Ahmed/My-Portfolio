@@ -340,10 +340,10 @@ img {
   border-radius: 0.5rem;
   z-index: var(--z-back);
 }
-.skills__react/next {
+.skills__react_next {
   width: 92%;
 }
-.skills__node/express {
+.skills__node_express {
   width: 87%;
 }
 .skills__js {
@@ -352,7 +352,7 @@ img {
 .skills__db {
   width: 94%;
 }
-.skills__git/github {
+.skills__git_github {
   width: 90%;
 }
 .skills__img {
