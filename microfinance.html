@@ -13,7 +13,7 @@
 
     body {
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: #fff;
       min-height: 100vh;
       display: flex;
@@ -30,10 +30,11 @@
       backdrop-filter: blur(10px);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
       max-width: 90%;
+      width: 100%;
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-bottom: 15px;
       background: linear-gradient(45deg, #fff, #4CAF50);
       -webkit-background-clip: text;
@@ -41,7 +42,7 @@
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #ddd;
       margin-bottom: 20px;
     }
@@ -49,8 +50,9 @@
     .countdown {
       display: flex;
       justify-content: center;
-      gap: 15px;
+      gap: 10px;
       flex-wrap: wrap;
+      margin-bottom: 20px;
     }
 
     .countdown-item {
@@ -58,6 +60,8 @@
       padding: 15px;
       border-radius: 10px;
       min-width: 80px;
+      flex: 1;
+      max-width: 100px;
     }
 
     .countdown-item span {
@@ -73,6 +77,10 @@
 
     .vip-form {
       margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
     }
 
     input[type="email"] {
@@ -81,7 +89,7 @@
       border-radius: 20px;
       background: rgba(255, 255, 255, 0.1);
       color: #fff;
-      width: 80%;
+      width: 100%;
       max-width: 300px;
     }
 
@@ -92,12 +100,54 @@
       background: linear-gradient(45deg, #4CAF50, #8BC34A);
       color: #fff;
       cursor: pointer;
-      margin-top: 10px;
+      width: 100%;
+      max-width: 300px;
+      transition: transform 0.3s ease;
     }
 
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    /* Finance Features Section */
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .feature-item {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      width: 150px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-item img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    .feature-item h3 {
+      font-size: 1rem;
+      color: #4CAF50;
+      margin-bottom: 5px;
+    }
+
+    .feature-item p {
+      font-size: 0.9rem;
+      color: #ddd;
+    }
+
+    /* Media Queries for Responsiveness */
     @media (max-width: 768px) {
       h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
       p {
         font-size: 1rem;
@@ -108,6 +158,25 @@
       }
       .countdown-item span {
         font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+      .countdown-item {
+        min-width: 60px;
+        padding: 8px;
+      }
+      .countdown-item span {
+        font-size: 1.2rem;
+      }
+      .countdown-item small {
+        font-size: 0.8rem;
       }
     }
   </style>
@@ -138,6 +207,24 @@
       <input type="email" placeholder="Enter your email for early access">
       <button onclick="alert('You’re now on the early access list!')">Get Early Access</button>
     </div>
+    <!-- Finance Features Section -->
+    <div class="features">
+      <div class="feature-item">
+        <img src="https://img.icons8.com/ios-filled/50/4CAF50/money-bag.png" alt="Loans">
+        <h3>Loans</h3>
+        <p>Access affordable loans for your needs.</p>
+      </div>
+      <div class="feature-item">
+        <img src="https://img.icons8.com/ios-filled/50/4CAF50/wallet.png" alt="Savings">
+        <h3>Savings</h3>
+        <p>Save securely and grow your wealth.</p>
+      </div>
+      <div class="feature-item">
+        <img src="https://img.icons8.com/ios-filled/50/4CAF50/line-chart.png" alt="Investments">
+        <h3>Investments</h3>
+        <p>Invest wisely for a better future.</p>
+      </div>
+    </div>
   </div>
   <script>
     const launchDate = new Date('2024-03-01').getTime();
@@ -148,10 +235,10 @@
       const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-      document.getElementById('days').textContent = days;
-      document.getElementById('hours').textContent = hours;
-      document.getElementById('minutes').textContent = minutes;
-      document.getElementById('seconds').textContent = seconds;
+      document.getElementById('days').textContent = String(days).padStart(2, '0');
+      document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
       if (diff < 0) {
         clearInterval(timer);
         document.querySelector('.countdown').innerHTML = '<div>We Are Live! 🚀</div>';
