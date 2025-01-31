@@ -5,14 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VIP Microfinance - Coming Soon</title>
   <style>
-    /* Reset */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    /* Body Styling */
     body {
       font-family: 'Arial', sans-serif;
       background: linear-gradient(135deg, #1a1a2e, #16213e);
@@ -21,72 +19,51 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
-    }
-
-    /* Glowing Background Effect */
-    .glow {
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      background: linear-gradient(45deg, #4e54c8, #8f94fb);
-      border-radius: 50%;
-      filter: blur(80px);
-      opacity: 0.3;
-      animation: glowMove 10s infinite alternate;
-    }
-
-    /* Container */
-    .container {
       text-align: center;
-      z-index: 1;
-      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
       padding: 40px;
-      border-radius: 20px;
+      border-radius: 15px;
       backdrop-filter: blur(10px);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      max-width: 90%;
     }
 
-    /* Text Styling */
     h1 {
-      font-size: 3.5rem;
-      margin-bottom: 20px;
+      font-size: 3rem;
+      margin-bottom: 15px;
       background: linear-gradient(45deg, #fff, #8f94fb);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: fadeIn 1s ease;
     }
 
     p {
       font-size: 1.2rem;
       color: #ddd;
-      margin-bottom: 30px;
-      animation: fadeIn 2s ease;
+      margin-bottom: 20px;
     }
 
-    /* Countdown Timer */
     .countdown {
       display: flex;
       justify-content: center;
-      gap: 25px;
-      margin-bottom: 30px;
+      gap: 15px;
+      flex-wrap: wrap;
     }
 
     .countdown-item {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 15px;
       border-radius: 10px;
-      min-width: 100px;
-      backdrop-filter: blur(5px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      min-width: 80px;
     }
 
     .countdown-item span {
       display: block;
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: bold;
-      margin-bottom: 5px;
     }
 
     .countdown-item small {
@@ -94,55 +71,51 @@
       color: #8f94fb;
     }
 
-    /* VIP Subscribe Form */
     .vip-form {
-      margin-top: 30px;
+      margin-top: 20px;
     }
 
     input[type="email"] {
-      padding: 15px 25px;
+      padding: 10px;
       border: none;
-      border-radius: 50px;
+      border-radius: 20px;
       background: rgba(255, 255, 255, 0.1);
       color: #fff;
-      width: 300px;
-      margin-right: 10px;
-      backdrop-filter: blur(5px);
+      width: 80%;
+      max-width: 300px;
     }
 
     button {
-      padding: 15px 30px;
+      padding: 10px 20px;
       border: none;
-      border-radius: 50px;
+      border-radius: 20px;
       background: linear-gradient(45deg, #4e54c8, #8f94fb);
       color: #fff;
       cursor: pointer;
-      transition: transform 0.3s ease;
+      margin-top: 10px;
     }
 
-    button:hover {
-      transform: scale(1.05);
-    }
-
-    /* Animations */
-    @keyframes glowMove {
-      0% { transform: translate(-50%, -50%) scale(1); }
-      100% { transform: translate(50%, 50%) scale(1.2); }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      .countdown-item {
+        min-width: 70px;
+        padding: 10px;
+      }
+      .countdown-item span {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="glow"></div>
   <div class="container">
     <h1>VIP Microfinance</h1>
     <p>Experience premium financial services. Launching soon!</p>
-    
-    <!-- Countdown Timer -->
     <div class="countdown">
       <div class="countdown-item">
         <span id="days">00</span>
@@ -161,38 +134,29 @@
         <small>Seconds</small>
       </div>
     </div>
-
-    <!-- VIP Email Form -->
     <div class="vip-form">
       <input type="email" placeholder="Enter your email for VIP access">
       <button onclick="alert('You’re now on the VIP list!')">Get Early Access</button>
     </div>
   </div>
-
   <script>
-    // Countdown Timer
     const launchDate = new Date('2024-03-01').getTime();
-
     const updateTimer = () => {
       const now = new Date().getTime();
       const diff = launchDate - now;
-
       const days = Math.floor(diff / (1000 * 60 * 60 * 24));
       const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-      document.getElementById('days').textContent = String(days).padStart(2, '0');
-      document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-
+      document.getElementById('days').textContent = days;
+      document.getElementById('hours').textContent = hours;
+      document.getElementById('minutes').textContent = minutes;
+      document.getElementById('seconds').textContent = seconds;
       if (diff < 0) {
         clearInterval(timer);
-        document.querySelector('.countdown').innerHTML = '<div style="font-size:1.5rem">We Are Live! 🚀</div>';
+        document.querySelector('.countdown').innerHTML = '<div>We Are Live! 🚀</div>';
       }
     };
-
     const timer = setInterval(updateTimer, 1000);
     updateTimer();
   </script>
