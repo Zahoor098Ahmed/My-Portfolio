@@ -37,7 +37,7 @@
                 <div class="home__data">
                     <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Zahoor Ahmed </span><br> Software Engineer</h1>
                     <a href="https://www.instagram.com/developervision?igsh=MWQwd2N3NnAzYnFsYg==" target="_blank" class="button">Contact</a>
-                    <a href="images/My CV.pdf" target="_blank" class="button">Resume</a>
+                    <a href="images/Software Engineer - Zahoor Ahmed.pdf" target="_blank" class="button">Resume</a>
                 </div>
             
                 <div class="home__social">
@@ -167,7 +167,7 @@
                         <img src="https://cdn.pixabay.com/photo/2023/08/25/09/58/ai-generated-8212644_1280.jpg" alt="Light Bulb">
                     </a>
 
-<!--                           Login Email & Passwords
+                          <!-- Login Email & Passwords
 
                           Admin Dashboard
                           email: admin@gmail.com
@@ -184,25 +184,29 @@
                     <a href="https://lms-project-blond.vercel.app/" class="work__img">
                         <img src="https://static.vecteezy.com/system/resources/previews/029/921/980/non_2x/flat-web-template-with-lms-for-concept-design-concept-of-learning-management-system-vector.jpg" alt="LMS">
                     </a>
-                    <a href="microfinance.html" class="work__img">
-                        <img src="https://wittysparks.com/wp-content/uploads/2018/01/Microfinance-Accelerating-Business-Growth.jpg" alt="Microfinance App">
+                    <a href="https://zahoor098ahmed.github.io/E-commerce-internship/" class="work__img">
+                        <img src="https://webandcrafts.com/_next/image?url=https%3A%2F%2Fadmin.wac.co%2Fuploads%2FWhat_is_E_commerce_and_What_are_its_Applications_2_d2eb0d4402.jpg&w=4500&q=90" alt="E commerce website">
                     </a>
                 </div>
             </section>
 
             <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
+           <section class="contact section" id="contact">
+    <h2 class="section-title">Contact</h2>
 
-                <div class="contact__container bd-grid">
-                <form action="/submit-form" method="POST" class="contact__form">
-                    <input type="text" name="name" placeholder="Name" class="contact__input" required>
-                    <input type="email" name="email" placeholder="Email" class="contact__input" required>
-                    <textarea name="message" placeholder="Your message" class="contact__input" required></textarea>
-                    <input type="submit" value="Submit" class="contact__button button">
-                </form>
-            </div>      
-            </section>
+    <div class="contact__container bd-grid">
+        <form id="contactForm" class="contact__form">
+            <input type="text" name="name" placeholder="Name" class="contact__input" required>
+            <input type="email" name="email" placeholder="Email" class="contact__input" required>
+            <textarea name="message" placeholder="Your message" class="contact__input" required></textarea>
+            <input type="submit" value="Submit" class="contact__button button">
+        </form>
+
+        <!-- Notification -->
+        <p id="formMessage" style="display:none; color: green; margin-top: 10px;">Form submitted successfully!</p>
+    </div>
+</section>
+
         </main>
 
         <!--===== FOOTER =====-->

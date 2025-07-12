@@ -51,6 +51,18 @@ const sr = ScrollReveal({
 //     reset: true
 });
 
+ document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // form ko page reload se roke
+        // Agar aap backend submit kar rahe ho to yahan AJAX code ayega
+
+        // Show success message
+        const message = document.getElementById("formMessage");
+        message.style.display = "block";
+
+        // Optional: Form clear karne ke liye
+        event.target.reset();
+    });
+
 
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
